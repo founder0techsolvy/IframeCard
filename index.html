@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Card Slider HTML | CSS </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <style>
+      
+      /*Import  google font Montserrat*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{ 
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url(bg.jpg) #030728 no-repeat center;
+}
+.slider-wrapper{
+    overflow: hidden;
+    max-width: 1200px;
+    margin:0 70px 55px;
+}
+
+.card-list .card-item{
+    color:#fff;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(30px);
+    user-select: none;
+    padding:35px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card-list .card-item .user-img{
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    border: 3px solid #fff;
+    padding:4px;
+}
+
+.card-list .card-item .user-profession{
+    font-size: 1.1rem;
+    color:#e3e3e3;
+    font-weight: 500;
+    margin:14px 0 40px;
+}
+
+.card-list .card-item .message-button{
+    font-size: 1.25rem;
+    padding:10px 35px;
+    color: #030728;
+    background-color: #fff;
+    border-radius: 6px;
+    font-size: 500;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: 0.2s ease;
+}
+
+.card-list .card-item .message-button:hover{
+    color: #fff;
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid #fff;
+    
+}
+
+.slider-wrapper .swiper-pagination-bullet{
+    background-color: #fff;
+    height:15px;
+    width:15px;
+}
+.slider-wrapper .swiper-slide-button{
+    color:#fff;
+    margin-top: -50px;
+    transition: 0.2 ease ;
+}
+.slider-wrapper .swiper-slide-button:hover{
+    color:#4658ff;
+
+}
+@media(max-width:768px){
+    .slider-wrapper{
+        margin:0 10px 40px;
+    }
+    .slider-wrapper .swiper-slide-button{
+        display: none;
+    }
+    
+}
+    </style>
+</head>
+<body>
+<div class="container swiper">
+    <div class="slider-wrapper" >
+        <div class="card-list swiper-wrapper">
+          <!--  <div class="card-item  swiper-slide">
+                <img src="avi.jpg" alt="User Image" class="user-img">
+                <h2 class="user-name"></h2>Avinash Mishra</h2></h2>
+                <p class="user-profession">Full Stack Developer</p>
+                <button class="message-button">MEET ME</button>
+            </div> -->
+            
+
+            <div class="card-item  swiper-slide">
+                <img src="avi.jpg" alt="User Image" class="user-img">
+                <h2 class="user-name">Avinash Mishra</h2>
+                <p class="user-profession">Full Stack Developer</p>
+             <a href="https://founder0techsolvy.github.io/SHASTRI/">   <button class="message-button">MEET ME</button> </a>
+            </div>
+
+     <div class="card-item  swiper-slide">
+                <img src="avi.jpg" alt="User Image" class="user-img">
+                <h2 class="user-name">Avinash Mishra</h2>
+                <p class="user-profession">Full Stack Developer</p>
+             <a href="https://founder0techsolvy.github.io/SHASTRI/">   <button class="message-button">MEET ME</button> </a>
+            </div>
+
+            <div class="card-item  swiper-slide">
+                <img src="avi.jpg" alt="User Image" class="user-img">
+                <h2 class="user-name">Avinash Mishra</h2>
+                <p class="user-profession">Full Stack Developer</p>
+                <a href="https://founder0techsolvy.github.io/SHASTRI/">  
+                <button class="message-button">MEET ME </button> </a>
+            </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-slide-button swiper-button-prev"></div>
+        <div class="swiper-slide-button swiper-button-next"></div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+    const swiper = new Swiper('.slider-wrapper', {
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 30,
+
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true,
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    //Responsive break points
+    breakpoints: {
+      0: {
+        slidesPerView:1
+      },
+      768: {
+        slidesPerView:2
+      },
+      1024: {
+        slidesPerView:3
+      },
+
+    }
+  });</script>
+</body 
+</html>
